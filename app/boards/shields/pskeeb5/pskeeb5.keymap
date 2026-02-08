@@ -33,17 +33,7 @@
     ms:   kp_sk  { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&sk>; };
     lm1s: lm1_sk { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&lm1>, <&sk>; quick-tap-ms = <200>; };
     lm2s: lm2_sk { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&lm2>, <&sk>; quick-tap-ms = <200>; };
-    mm_EQUAL_KPLUS: mm_EQUAL_KPLUS { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp EQUAL>, <&kp KP_PLUS>; };
-    mm_GT_EXCL:     mm_GT_EXCL     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp GT>, <&kp EXCL>; };
-    mm_LBRC_RBRC:   mm_LBRC_RBRC   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp LBRC>, <&kp RBRC>; };
-    mm_LPAR_RPAR:   mm_LPAR_RPAR   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp LPAR>, <&kp RPAR>; };
-    mm_LBKT_RBKT:   mm_LBKT_RBKT   { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp LBKT>, <&kp RBKT>; };
-    mm_PRV_BUP:     mm_PRV_BUP     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp C_PREV>, <&kp C_BRI_UP>; };
-    mm_NXT_BDN:     mm_NXT_BDN     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp C_NEXT>, <&kp C_BRI_DN>; };
-    mm_PP_CALC:     mm_PP_CALC     { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp C_PP>,   <&kp C_AL_CALC>; };
-    mm_VUP_PRV_BUP: mm_VUP_PRV_BUP { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LCTL|MOD_RCTL)>; bindings = <&kp C_VOL_UP>, <&mm_PRV_BUP>; };
-    mm_VDN_NXT_BDN: mm_VDN_NXT_BDN { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LCTL|MOD_RCTL)>; bindings = <&kp C_VOL_DN>, <&mm_NXT_BDN>; };
-    mm_MUT_PP_CALC: mm_MUT_PP_CALC { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LCTL|MOD_RCTL)>; bindings = <&kp C_MUTE>,   <&mm_PP_CALC>; };
+    mms_encoder: mms_encoder { compatible = "zmk,behavior-sensor-rotate";     #sensor-binding-cells = <0>; bindings = <&mms MS_TP_SENSITIVITY_DECR>, <&mms MS_TP_SENSITIVITY_INCR>; };
   };
   combos { compatible = "zmk,combos";
     space           { timeout-ms = <30>; key-positions = <0 1>;               bindings = <&kp SPACE>;        layers = <COLEMAK>; };
